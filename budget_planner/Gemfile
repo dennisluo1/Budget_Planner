@@ -59,6 +59,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Bootstrap Gem
 gem 'bootstrap', '~> 4.0.0.beta'
 
-# React-Rails GEM
+# React-Rails Gem
 gem "react-rails"
 
