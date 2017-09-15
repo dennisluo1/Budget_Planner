@@ -4,12 +4,17 @@
         purchases: @props.data 
     getDefaultProps: ->  # Defines value that component has by default
         purchases: []
+    addPurchase: (purchase) -> # Takes in data from addPurchase to purchase
+        purchases = @state.purchases.slice()
+        purchases.push purchase
+        @setState purchases: purchases
     render: ->  
         React.DOM.div
             className: 'purchases'
             React.DOM.h1
                 className: 'title'
                 'Purchases'
+            React.createElement PurchaseForm, handleNewPurchase: @addPurchase # Render purchase form component 
             React.DOM.table # Pass purchase data 
                 className: 'table border'
                 React.DOM.thead null, # Outputs header row
