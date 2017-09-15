@@ -2,10 +2,10 @@ class PurchasesController < ApplicationController
     def create # Create new purchase
         @Purchase = Purchase.new(purchase_params)
 
-        if @purchase.save
-            render json: @purchase
+        if @Purchase.save
+            render json: @Purchase
         else 
-            render json: @purchase.errors, status: unprocessable_entity
+            render json: @Purchase.errors, status: unprocessable_entity
         end
     end
     

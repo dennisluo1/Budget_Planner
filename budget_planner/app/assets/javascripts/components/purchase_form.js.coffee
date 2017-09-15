@@ -40,7 +40,7 @@
                     type: 'number' # Cost Purchased
                     className: 'form-value'
                     placeholder: 'Cost'
-                    name: 'costpuchased'
+                    name: 'costpurchased'
                     value: @state.costpurchased
                     onChange: @handleValueChange
                 React.DOM.input
@@ -54,7 +54,7 @@
                     type: 'submit' # Submit Button
                     className: 'btn btn-submit'
                     disabled: !@valid()
-                    'Create Purchase'
+                    'Add Purchase'
 
 
                     
