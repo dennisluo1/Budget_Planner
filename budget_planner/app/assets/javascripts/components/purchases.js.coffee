@@ -8,6 +8,11 @@
         purchases = @state.purchases.slice()
         purchases.push purchase
         @setState purchases: purchases
+    deletePurchase: (purchase) -> 
+        purchases = @state.purchases.slice()
+        index = purchases.indexOf purchase
+        purchases.splice index, 1
+        @replaceState purchases: purchases
     render: ->  
         React.DOM.div
             className: 'purchases'
@@ -22,6 +27,7 @@
                         React.DOM.th null, 'Purchase Item(s)'                    
                         React.DOM.th null, 'Cost ($)'
                         React.DOM.th null, 'Quantity'
+                        React.DOM.th null, 'Actions'
                     React.DOM.tbody null, # Outputs the data below header
                         for purchase in @state.purchases
-                            React.createElement Purchase, key: purchase.id, purchase: purchase                                     
+                            React.createElement Purchase, key: purchase.id, purchase: purchase, handleDeletePurchase: @deletePurchase                                     

@@ -29,6 +29,8 @@
                     name: 'date'
                     value: @state.date
                     onChange: @handleValueChange # Handles keystroke when detected
+            React.DOM.div
+                className: 'form-sub'                
                 React.DOM.input
                     type: 'text' # Purchase Name
                     className: 'form-value'
@@ -36,6 +38,8 @@
                     name: 'purchasename'
                     value: @state.purchasename
                     onChange: @handleValueChange
+            React.DOM.div
+                className: 'form-sub'                    
                 React.DOM.input
                     type: 'number' # Cost Purchased
                     className: 'form-value'
@@ -43,6 +47,8 @@
                     name: 'costpurchased'
                     value: @state.costpurchased
                     onChange: @handleValueChange
+            React.DOM.div
+                className: 'form-sub'
                 React.DOM.input
                     type: 'number' # Quantity Purchased
                     className: 'form-value'
