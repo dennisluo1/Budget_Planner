@@ -13,9 +13,12 @@
             dataType: 'JSON'
             success: () => 
                 @props.handleDeletePurchase @props.purchase # Notify parent component purchases by sending this component's data to handleDelete 
+    toggleUnit: (e) -> # ********* Check this line of code 
+        e.preventDefault() # ********* Check this line of code     
     handleEdit: (e) -> # Send Ajax request 
         e.preventDefault()
         data = 
+            # Use ReactDom.findDOMNode to take values from form using refs
             date: ReactDOM.findDOMNode(@refs.date).value
             purchasename: ReactDOM.findDOMNode(@refs.purchasename).value
             costpurchased: ReactDOM.findDOMNode(@refs.costpurchased).value
@@ -29,25 +32,23 @@
             success: (data) => 
                 @setState edit: false
                 @props.handleEditPurchase @props.purchase, data
-    toggleUnit: (e) -> # ********* Check this line of code 
-        e.preventDefault() # ********* Check this line of code 
     purchaseRow: -> # Create table elements to display props from component
-        React.DOM.tr null, 
+        React.DOM.tr null, # function should return current row with edit button added
             React.DOM.td null, @props.purchase.date
             React.DOM.td null, @props.purchase.purchasename
             React.DOM.td null, @props.purchase.costpurchased
             React.DOM.td null, @props.purchase.quantitypurchased
             React.DOM.td null, 
                 React.DOM.button
-                    className: 'bt btn-edit'
+                    className: 'btn btn-edit'
                     onClick: @handleToggle
                     'Edit'
                 React.DOM.button
                     className: 'btn btn-delete'
                     onClick: @handleDelete
                     'Delete'
-    purchaseForm: -> 
-        React.DOM.tr null,
+    purchaseForm: -> # Create purchaseForm and purchase functions for conditional
+        React.DOM.tr null, # Should return input fields and buttons
             React.DOM.td null,
                 React.DOM.input
                     className: 'form-main'
@@ -79,9 +80,9 @@
                     'Update'
                 React.DOM.button
                     className: 'btn btn-delete'
-                    onClick: @handleToggle
+                    # onClick: @handleToggle # This will delete item when you press cancel. Need to fix this error
                     'Cancel'
-    render: -> 
+    render: -> # Will return React element
         if @state.edit
             @purchaseForm()
         else 

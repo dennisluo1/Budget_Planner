@@ -20,11 +20,11 @@ class PurchasesController < ApplicationController
     end
     
     def update
-        @purchase = Purchase.find(params[:id])
-        if @purchase.update(lift_params)
-            render json: @purchase
+        @Purchase = Purchase.find(params[:id])
+        if @Purchase.update(purchase_params)
+            render json: @Purchase
         else
-            render json: @purchase.errors, status: :unprocessable_entity
+            render json: @Purchase.errors, status: :unprocessable_entity
         end
     end
     

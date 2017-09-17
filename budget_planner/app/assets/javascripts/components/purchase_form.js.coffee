@@ -48,6 +48,9 @@
                 name: 'quantitypurchased'
                 value: @state.quantitypurchased
                 onChange: @handleValueChange
+            # React.DOM.button 
+            #     className: 'btn btn-submit'
+            #     onClick: @toggleUnit
             React.DOM.button
                 type: 'submit' # Submit Button
                 className: 'btn btn-submit'

@@ -27,11 +27,12 @@
             React.DOM.table # Pass purchase data 
                 className: 'table border'
                 React.DOM.thead null, # Outputs header row
+                    React.DOM.tr null,
                         React.DOM.th null, 'Date'
                         React.DOM.th null, 'Purchase Item(s)'                    
                         React.DOM.th null, 'Cost ($)'
                         React.DOM.th null, 'Quantity'
                         React.DOM.th null, 'Delete'
-                    React.DOM.tbody null, # Outputs the data below header
-                        for purchase in @state.purchases
-                            React.createElement Purchase, key: purchase.id, purchase: purchase, handleDeletePurchase: @deletePurchase, handleEditPurchase: @updatePurchase                                     
+                React.DOM.tbody null, # Outputs the data below header
+                    for purchase in @state.purchases
+                        React.createElement Purchase, key: purchase.id, purchase: purchase, handleDeletePurchase: @deletePurchase, handleEditPurchase: @updatePurchase                                     
