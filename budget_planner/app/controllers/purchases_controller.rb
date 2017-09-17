@@ -13,8 +13,8 @@ class PurchasesController < ApplicationController
         @purchases = Purchase.all
     end
 
-    def destroy
-        @purchase = Purchase.find(params[:id])
+    def destroy # Deletes purchase
+        @purchase = Purchase.find(params[:id]) 
         @purchase.destroy
         head :no_content # Will create HTTP response 200
     end

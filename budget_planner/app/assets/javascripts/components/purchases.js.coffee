@@ -4,7 +4,7 @@
         purchases: @props.data 
     getDefaultProps: ->  # Defines value that component has by default
         purchases: []
-    addPurchase: (purchase) -> # Takes in data from addPurchase to purchase
+    addPurchase: (purchase) -> # Takes in data from addPurchase and renders to purchase
         purchases = @state.purchases.slice()
         purchases.push purchase
         @setState purchases: purchases
@@ -27,7 +27,7 @@
                         React.DOM.th null, 'Purchase Item(s)'                    
                         React.DOM.th null, 'Cost ($)'
                         React.DOM.th null, 'Quantity'
-                        React.DOM.th null, 'Actions'
+                        React.DOM.th null, 'Delete'
                     React.DOM.tbody null, # Outputs the data below header
                         for purchase in @state.purchases
                             React.createElement Purchase, key: purchase.id, purchase: purchase, handleDeletePurchase: @deletePurchase                                     
