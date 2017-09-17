@@ -13,6 +13,10 @@
         index = purchases.indexOf purchase
         purchases.splice index, 1
         @replaceState purchases: purchases
+    updatePurchase: (purchase, data) -> 
+        index = @state.purchases.indexOf purchase
+        purchases = React.addons.update(@state.purchases { $splice: [[index, 1, data]] })
+        @replaceState purchases: purchases
     render: ->  
         React.DOM.div
             className: 'purchases'
@@ -30,4 +34,4 @@
                         React.DOM.th null, 'Delete'
                     React.DOM.tbody null, # Outputs the data below header
                         for purchase in @state.purchases
-                            React.createElement Purchase, key: purchase.id, purchase: purchase, handleDeletePurchase: @deletePurchase                                     
+                            React.createElement Purchase, key: purchase.id, purchase: purchase, handleDeletePurchase: @deletePurchase, handleEditPurchase: @updatePurchase                                     

@@ -19,6 +19,15 @@ class PurchasesController < ApplicationController
         head :no_content # Will create HTTP response 200
     end
     
+    def update
+        @purchase = Purchase.find(params[:id])
+        if @purchase.update(lift_params)
+            render json: @purchase
+        else
+            render json: @purchase.errors, status: :unprocessable_entity
+        end
+    end
+    
     private
     
     def purchase_params
