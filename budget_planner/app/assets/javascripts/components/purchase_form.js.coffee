@@ -8,6 +8,8 @@
     handleValueChange: (e) -> # Detects input
         valueName = e.target.name
         @setState "#{ valueName }": e.target.value # Updates component state with new value, triggers UI refresh using component new state
+    # toggleUnit: (e) -> 
+    #     e.preventDefault()
     valid: -> 
         @state.date && @state.purchasename && @state.costpurchased && @state.quantitypurchased
     handleSubmit: (e) -> # Prevents default action, rails submit http request
@@ -30,14 +32,14 @@
             React.DOM.input
                 type: 'text' # Purchase Name
                 className: 'form-value'
-                placeholder: 'Purchase'
+                placeholder: 'purchasename'
                 name: 'purchasename'
                 value: @state.purchasename
                 onChange: @handleValueChange               
             React.DOM.input
                 type: 'number' # Cost Purchased
                 className: 'form-value'
-                placeholder: 'Cost'
+                placeholder: 'costpurchased'
                 name: 'costpurchased'
                 value: @state.costpurchased
                 onChange: @handleValueChange
@@ -57,5 +59,3 @@
                 disabled: !@valid()
                 'Add Purchase'
             
-
-                    

@@ -19,16 +19,16 @@
         e.preventDefault()
         data = 
             # Use ReactDom.findDOMNode to take values from form using refs
-            date: ReactDOM.findDOMNode(@refs.date).value
+            date: ReactDOM.findDOMNode(@refs.date).value # Error:Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component's `render` method
             purchasename: ReactDOM.findDOMNode(@refs.purchasename).value
             costpurchased: ReactDOM.findDOMNode(@refs.costpurchased).value
             quantitypurchased: ReactDOM.findDOMNode(@refs.quantitypurchased).value
         $.ajax 
             method: 'PUT'
-            url: "/purchases/#{ @props.purchase.id } "
+            url: "/purchases/#{ @props.purchase.id }"
             dataType: 'JSON'
             data: 
-                lift: data
+                purchase: data
             success: (data) => 
                 @setState edit: false
                 @props.handleEditPurchase @props.purchase, data
@@ -73,7 +73,7 @@
                     type: 'number'
                     defaultValue: @props.purchase.quantitypurchased
                     ref: 'quantitypurchased'  
-            React.DOM.td null, 
+            React.DOM.td null, # When edit is triggered, lead to update
                 React.DOM.button
                     className: 'btn btn-edit'
                     onClick: @handleEdit

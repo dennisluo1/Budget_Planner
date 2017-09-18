@@ -15,7 +15,7 @@
         @replaceState purchases: purchases
     updatePurchase: (purchase, data) -> 
         index = @state.purchases.indexOf purchase
-        purchases = React.addons.update(@state.purchases { $splice: [[index, 1, data]] })
+        purchases = React.addons.update(@state.purchases, { $splice: [[index, 1, data]] })
         @replaceState purchases: purchases
     render: ->  
         React.DOM.div
