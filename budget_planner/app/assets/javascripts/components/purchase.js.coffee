@@ -19,10 +19,10 @@
         e.preventDefault()
         data = 
             # Use ReactDom.findDOMNode to take values from form using refs
-            date: ReactDOM.findDOMNode(@refs.date).value # Error:Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component's `render` method
-            purchasename: ReactDOM.findDOMNode(@refs.purchasename).value
-            costpurchased: ReactDOM.findDOMNode(@refs.costpurchased).value
-            quantitypurchased: ReactDOM.findDOMNode(@refs.quantitypurchased).value
+            date: document.getElementById('date').value # Error:Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component's `render` method
+            purchasename: document.getElementById('purchasename').value
+            costpurchased: document.getElementById('costpurchased').value
+            quantitypurchased: document.getElementById('quantitypurchased').value
         $.ajax 
             method: 'PUT'
             url: "/purchases/#{ @props.purchase.id }"   
@@ -55,25 +55,25 @@
                     className: 'form-main'
                     type: 'date'
                     defaultValue: @props.purchase.date
-                    ref: 'date'
+                    id: 'date'
             React.DOM.td null,
                 React.DOM.input
                     className: 'form-main'
                     type: 'text'
                     defaultValue: @props.purchase.purchasename
-                    ref: 'purchasename'
+                    id: 'purchasename'
             React.DOM.td null,
                 React.DOM.input
                     className: 'form-main'
                     type: 'number'
                     defaultValue: @props.purchase.costpurchased
-                    ref: 'costpurchased'                    
+                    id: 'costpurchased'                    
             React.DOM.td null,
                 React.DOM.input
                     className: 'form-main'
                     type: 'number'
                     defaultValue: @props.purchase.quantitypurchased
-                    ref: 'quantitypurchased'  
+                    id: 'quantitypurchased'  
             React.DOM.td null, # When edit is triggered, lead to update
                 React.DOM.button
                     className: 'btn btn-primary'
@@ -81,7 +81,7 @@
                     'Update'
                 React.DOM.button
                     className: 'btn btn-danger'
-                    # onClick: @handleToggle # This will delete item when you press cancel. Need to fix this error
+                    onClick: @handleToggle # This will delete item when you press cancel. Need to fix this error
                     'Cancel'
     render: -> # Will return React element
         if @state.edit

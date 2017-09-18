@@ -1,5 +1,5 @@
 # Create component to render data to browser
-@Purchases = React.createClass 
+@Purchases = React.createClass # This is not conventional so will need to change createClass
     getInitialState: -> # Sets initial state of component
         purchases: @props.data 
     getDefaultProps: ->  # Defines value that component has by default

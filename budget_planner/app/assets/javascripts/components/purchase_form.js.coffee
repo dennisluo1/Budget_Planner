@@ -1,4 +1,5 @@
 # React component to display form
+# Need to convert work below to a more "React" feel, very basic set up right now
 @PurchaseForm = React.createClass
     getInitialState: -> # Will set initial values for fields
         date: ''
@@ -14,21 +15,21 @@
         @state.date && @state.purchasename && @state.costpurchased && @state.quantitypurchased
     handleSubmit: (e) -> # Prevents default action, rails submit http request
         e.preventDefault()
-        $.post '', { purchase: @state }, (data) => # jQuery post to database 
+        $.post '', { purchase: @state }, (data) => # jQuery post to database, need to fix this up
             @props.handleNewPurchase data
             @setState @getInitialState()
         , 'JSON'
     render: -> 
-        React.DOM.form
+        React.DOM.form # Input values of date/purchase/cost/quantity below
             className: 'form-main'
             onSubmit: @handleSubmit
-            React.DOM.input # Value attribute of input, date is set to component in state
-                type: 'date' # Date
+            React.DOM.input # Value attribute of input
+                type: 'date' # Date, is set to component in state
                 className: 'form-value'
                 placeholder: 'date'
                 name: 'date'
                 value: @state.date
-                onChange: @handleValueChange # Handles keystroke when detected               
+                onChange: @handleValueChange # Will handle keystroke when detected               
             React.DOM.input
                 type: 'text' # Purchase Name
                 className: 'form-value'

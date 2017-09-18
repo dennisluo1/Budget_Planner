@@ -31,20 +31,21 @@ For Budget Planner, I decided to focus on React and Rails to build this platform
 
 [Proposal](https://github.com/dennisluo1/Budget_Planner/blob/master/proposal.md)
 
-## The Making of Budget Planner
-
-Credits: 
-* [Inspiration for App](https://www.mint.com/)
-* [3 ways to use React with Ruby on Rails 5](https://learnetto.com/blog/3-ways-to-use-react-with-ruby-on-rails-5)
-* [Building a CRUD interface with React and Ruby on Rails](https://www.pluralsight.com/guides/ruby-ruby-on-rails/building-a-crud-interface-with-react-and-ruby-on-rails)
-* [How to Add React to a Ruby on Rails Application](https://www.youtube.com/watch?v=pVHEPf7S88I)
-* [Beginner Rails 5 With ReactJS Tutorial](https://www.youtube.com/watch?v=PIel9V6JImc&t=8s)
-
 ## Challenges
 
 Some of my biggest challenges encountered along the way using CoffeeScript. CoffeeScript is very precise when it comes to syntax and a slight space can affect the overall functionality of the code. In addition another roadblock was perfecting the set up of the CRUD system. In particular the edit/update functionality took quite some time to fix as there were several bugs and other setbacks along the way.
 
 ## Opportunities for Future Growth
+
 The next step of budget planner is to incorporate a budget calculator that will allow users to input their income and receive an estimate of how much they should be saving per month and year on expenses such as: rent, transportation, utilities, food, medical, and personal.    
 
 In addition, it will be incredibly important to set up an login/authentication to store users expenses into their personal account. Users will be able to not only store their expense history but also information regarding a budget calculation of their income history. Ideally, anyone and everyone is allow to use this tool without setting up an account to maintain their privacy. 
+
+## Credits: 
+
+* [Inspiration for App](https://www.mint.com/)
+* [3 ways to use React with Ruby on Rails 5](https://learnetto.com/blog/3-ways-to-use-react-with-ruby-on-rails-5)
+* [Building a CRUD interface with React and Ruby on Rails](https://www.pluralsight.com/guides/ruby-ruby-on-rails/building-a-crud-interface-with-react-and-ruby-on-rails)
+* [How to Add React to a Ruby on Rails Application](https://www.youtube.com/watch?v=pVHEPf7S88I)
+* [Beginner Rails 5 With ReactJS Tutorial](https://www.youtube.com/watch?v=PIel9V6JImc&t=8s)
+* [Investopedia: Investing 101](http://www.investopedia.com/university/beginner/)
