@@ -50,7 +50,9 @@ In addition, the user will have access to resources such as access to basic inve
 
 ## Challenges 
 
-A big challenge will be creating the necessary functions to calculate monthly and yearly budgets. 
+* Setting up CRUD with CoffeeScript
+* Setting up React and Rails to work together
+* Writing code in CoffeeScript syntax
 
 
 ## Links and Resources

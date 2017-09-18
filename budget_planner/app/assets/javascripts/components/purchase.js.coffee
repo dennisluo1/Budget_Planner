@@ -25,13 +25,14 @@
             quantitypurchased: ReactDOM.findDOMNode(@refs.quantitypurchased).value
         $.ajax 
             method: 'PUT'
-            url: "/purchases/#{ @props.purchase.id }"
+            url: "/purchases/#{ @props.purchase.id }"   
             dataType: 'JSON'
             data: 
                 purchase: data
             success: (data) => 
                 @setState edit: false
                 @props.handleEditPurchase @props.purchase, data
+
     purchaseRow: -> # Create table elements to display props from component
         React.DOM.tr null, # function should return current row with edit button added
             React.DOM.td null, @props.purchase.date
