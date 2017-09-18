@@ -26,6 +26,9 @@ class PurchasesController < ApplicationController
         else
             render json: @Purchase.errors, status: :unprocessable_entity
         end
+        # purchase = Purchase.find(params[:id])
+        # purchase.update_attributes(purchase_params)
+        # respond_with purchase, json: purchase
     end
     
     private

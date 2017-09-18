@@ -17,7 +17,7 @@ For Budget Planner, I decided to focus on React and Rails to build this platform
 ## Technical Discussion
 
 * React: Used for interactive front-end
-* Ruby on Rails: Used for back-end
+* Ruby on Rails: Used for back-end to expose some API endpoints with JSON output
 * CoffeeScript: JS syntax used to display code that is easier to understand 
 * Bootstrap: Used to add beautiful styling to design of app
 
