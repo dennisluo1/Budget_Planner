@@ -22,7 +22,7 @@
             className: 'purchases'
             React.DOM.h1
                 className: 'title'
-                'Purchases'
+                'Your Current Expenses:'
             React.createElement PurchaseForm, handleNewPurchase: @addPurchase # Render purchase form component 
             React.DOM.table # Pass purchase data 
                 className: 'table border'

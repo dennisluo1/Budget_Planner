@@ -41,11 +41,11 @@
             React.DOM.td null, @props.purchase.quantitypurchased
             React.DOM.td null, 
                 React.DOM.button
-                    className: 'btn btn-edit'
+                    className: 'btn btn-primary'
                     onClick: @handleToggle
                     'Edit'
                 React.DOM.button
-                    className: 'btn btn-delete'
+                    className: 'btn btn-danger'
                     onClick: @handleDelete
                     'Delete'
     purchaseForm: -> # Create purchaseForm and purchase functions for conditional
@@ -76,11 +76,11 @@
                     ref: 'quantitypurchased'  
             React.DOM.td null, # When edit is triggered, lead to update
                 React.DOM.button
-                    className: 'btn btn-edit'
+                    className: 'btn btn-primary'
                     onClick: @handleEdit
                     'Update'
                 React.DOM.button
-                    className: 'btn btn-delete'
+                    className: 'btn btn-danger'
                     # onClick: @handleToggle # This will delete item when you press cancel. Need to fix this error
                     'Cancel'
     render: -> # Will return React element

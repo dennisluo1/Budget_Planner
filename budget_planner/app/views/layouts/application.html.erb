@@ -9,14 +9,26 @@
   </head>
 
   <body>
-    <h1>Budget Planner</h1>
+    <!-- Title --> 
+    <div class="title-bar">
+      <h1>Budget Planner</h1>
+    </div>
+    <!-- Navigation Bar -->
     <nav> 
-      <div class="nav-bar"> 
-        <%= link_to("Home", purchases_path) %>
-        <%= link_to("Investing 101", investings_path) %>
-        <%= link_to("Personal Finance", finances_path) %>
-        <%= link_to("Resources", resources_path) %>
-      </div>
+      <ul class="nav-bar">
+        <li>
+          <%= link_to("Purchases", purchases_path) %>
+        </li>
+        <li>
+          <%= link_to("Investing 101", investings_path) %>
+        </li>
+        <li>
+          <%= link_to("Personal Finance", finances_path) %>
+        </li>
+        <li>
+          <%= link_to("Resources", resources_path) %>
+        </li>
+      </ul> 
     </nav>
 
     <%= yield %>
