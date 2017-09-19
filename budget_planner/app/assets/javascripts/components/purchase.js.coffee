@@ -15,15 +15,14 @@
                 @props.handleDeletePurchase @props.purchase # Notify parent component purchases by sending this component's data to handleDelete 
     toggleUnit: (e) -> # ********* Check this line of code 
         e.preventDefault() # ********* Check this line of code     
-    handleEdit: (e) -> # Send Ajax request 
+    handleEdit: (e) -> 
         e.preventDefault()
         data = 
-            # Use ReactDom.findDOMNode to take values from form using refs
-            date: document.getElementById('date').value # Error:Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component's `render` method
+            date: document.getElementById('date').value 
             purchasename: document.getElementById('purchasename').value
             costpurchased: document.getElementById('costpurchased').value
             quantitypurchased: document.getElementById('quantitypurchased').value
-        $.ajax 
+        $.ajax # Send Ajax request 
             method: 'PUT'
             url: "/purchases/#{ @props.purchase.id }"   
             dataType: 'JSON'
