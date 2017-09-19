@@ -10,7 +10,7 @@
         valueName = e.target.name
         @setState "#{ valueName }": e.target.value # Updates component state with new value, triggers UI refresh using component new state
     # toggleUnit: (e) -> 
-    #     e.preventDefault()
+    #     e.preventDefault()    
     valid: -> 
         @state.date && @state.purchasename && @state.costpurchased && @state.quantitypurchased
     handleSubmit: (e) -> # Prevents default action, rails submit http request

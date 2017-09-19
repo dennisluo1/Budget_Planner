@@ -15,12 +15,15 @@
  */
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid');
 
 // application.html.erb
 h1 {
     font-size: 60px;
     margin-top: 15px;
     margin-left: 15px;
+    font-family: 'Londrina Solid', cursive;
+    color: purple;
 }
 
 li {
