@@ -23,7 +23,7 @@ h1 {
     margin-top: 15px;
     margin-left: 15px;
     font-family: 'Londrina Solid', cursive;
-    color: purple;
+    color: black;
 }
 
 li {
@@ -34,11 +34,13 @@ li {
 .nav-bar {
     display: flex;
     font-size: 20px;
+    background-color: none;
 }  
 
 .title-bar {
-    background-color: #1E90FF;
+    background-color: none;
     padding: 20px 80px;
+    background-color: none;
 }
 
 // purchase.js.coffee
