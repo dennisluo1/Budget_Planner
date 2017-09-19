@@ -22,7 +22,7 @@
             purchasename: document.getElementById('purchasename').value
             costpurchased: document.getElementById('costpurchased').value
             quantitypurchased: document.getElementById('quantitypurchased').value
-        $.ajax # Send Ajax request 
+        $.ajax # Send Ajax request to put updated purchase
             method: 'PUT'
             url: "/purchases/#{ @props.purchase.id }"   
             dataType: 'JSON'

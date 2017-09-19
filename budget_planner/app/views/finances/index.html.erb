@@ -8,36 +8,90 @@
 </head>
 <body>
     <div class="main-container">
-        <h2>Enter Your Annual Income: <input class="annual-income"> </h2>
+        <h2>Enter Your Annual Income: <input type = 'text' id="annual-income" onChange="" > </h2>
+        <h4>This is how much you should be saving monthly per category</h4>
         </br>
         <div class="sub-container">
             <div class="sub-heading">
-            Rent (25%): <input class="rent">
+            Rent (25%): <h3 id="rent" ></h3>
+            <h4 id="rentTwo"></h4>
             </div>
             </br>
             <div class="sub-heading">
-            Transportation (10%): <input class="transportation">
+            Transportation (10%): <h3 id="transportation"></h3>
+            <h4 id="transportationTwo"></h4>            
             </div>
             </br>
             <div class="sub-heading">
-            Utilities (5%): <input class="utilities">
+            Utilities (5%): <h3 id="utilities"></h3>
             </div>
             </br>    
             <div class="sub-heading">
-            Food (10%): <input class="food">
+            Food (10%): <h3 id="food"></h3>
             </div>
             </br>  
             <div class="sub-heading">
-            Medical (5%): <input class="medical">
+            Medical (5%): <h3 id="medical"></h3>
             </div>
             </br>
             <div class="sub-heading">
-            Personal (5%): <input class="personal">
+            Personal (5%): <h3 id="personal"></h3>
             </div>
-            </br>            
+            </br>   
+            <button id="calculate-income" onClick=calcIncome()>Calculate</button>         
         </div>
         </br>
         
     </div>
+<script>
+function calcIncome() {
+    var income = document.getElementById('annual-income').value;
+    // Rent
+    var rentNum = (income * .25);
+    var rentNumTwo = (income * .25)/12;
+    rent.innerText = rentNum;
+    rentTwo.innerText = rentNumTwo;
+    // Transportation
+    var transportNum = (income * .10);
+    var transportNumTwo = (income * .10)/12;
+    transportation.innerText = transportNum;
+    transportationTwo.innerText = transportNumTwo;
+    // Utilities
+    var utilitiesNum = (income * .05);
+    var utilitiesNumTwo = (income * .05)/12;
+    utilities.innerText = utilitiesNum;
+    utilitiesTwo.innerTextTwo = utilitiesNumTwo;
+    // Food
+    var foodNum = (income * .10);
+    var foodNumTwo = (income * .10)/12;
+    food.innerText = foodNum;
+    foodTwo.innerText = foodNumTwo;
+    // Medical
+    var medicalNum = (income * .10);
+    var medicalNumTwo = (income * .10)/12;
+    medical.innerText = medicalNum;
+    medicalTwo.innerText = medicalNumTwo;
+    // Personal
+    var personalNum = (income * .05);
+    var personalNumTwo = (income * .05)/12;
+    personal.innerText = personalNum;
+    personalTwo.innerText = personalNumTwo;
+    // var transportation = document.getElementById('transportation');  
+    // transportation.innerHTML = income *  .10;
+
+    // var utilities = document.getElementById('utilities');
+    // utilities.innerHTML = income * .05;
+
+    // var food = document.getElementById('food');
+    // food.innerHTML = income * .10;
+
+    // var medical = document.getElementById('medical');
+    // medical.innerHTML = medical * .05;
+
+    // var personal = document.getElementById('personal');
+    // personal.innerHTML = personal * .05;
+
+}
+</script>
 </body>
 </html>
