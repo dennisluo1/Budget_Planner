@@ -18,29 +18,71 @@
 @import url('https://fonts.googleapis.com/css?family=Londrina+Solid');
 
 // application.html.erb
-h1 {
+
+.budget-planner {
     font-size: 60px;
+    font-weight: bold;
     margin-top: 15px;
     margin-left: 15px;
     font-family: 'Londrina Solid', cursive;
-    color: black;
+    color: #31588A;
+}
+
+.budget-planner-desc {
+    margin-left: 20px;
+    color: #90B2E4;
+}
+
+ul {
+    padding-top: 5px;
 }
 
 li {
     display: inline-block;
     padding: 20px 90px;
 }
-
+li:hover {
+    background-color: #F4F4EC;
+    opacity: .7;
+}
 .nav-bar {
     display: flex;
     font-size: 20px;
-    background-color: none;
+    background-color: #E8F1F5;
+    opacity: .8;
 }  
 
 .title-bar {
-    background-color: none;
+    background-color: #E8F1F5;
     padding: 20px 80px;
-    background-color: #A6CFE2;
+    opacity: .9;
+}
+input {
+    width: 15%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    resize: vertical;    
+}
+#annual-income {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    resize: vertical;      
+}
+
+footer {
+    font-size: 20px;
+    text-align: center;
+    color: #31588A;
+    background-color: #E8F1F5;
 }
 
 // purchases/index.html.erb
@@ -68,6 +110,14 @@ li {
     font-weight: bold;
 }
 
+#calculate-income {
+    width: 10%;
+    border-radius: 5px;
+    border-color: white;
+    font-size: 20px;
+    color: #31588A;
+    background-color: #90B2E4;    
+}
 // views/investing/index.html.erb
 .main-container {
     margin-left: 100px;
