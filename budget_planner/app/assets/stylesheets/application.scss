@@ -40,9 +40,15 @@ li {
 .title-bar {
     background-color: none;
     padding: 20px 80px;
-    background-color: none;
+    background-color: #A6CFE2;
 }
 
+// purchases/index.html.erb
+.keep-track {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
 // purchase.js.coffee
 
 // purchases.js.coffee 
@@ -54,6 +60,12 @@ li {
 .form-main {
     text-align: center;
     padding: 10px 5px;
+}
+
+//views/finance/index/html.erb
+.sub-heading-title {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 // views/investing/index.html.erb

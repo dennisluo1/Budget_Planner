@@ -8,61 +8,87 @@
 </head>
 <body>
     <div class="main-container">
-        <h2>Enter Your Annual Income: <input type = 'text' id="annual-income" onChange="" placeholder="Your Income"></h2>
-        <h4>Based on your income, your monthly expenses per category should not exceed the following:</h4>
+        <h2>Enter Your Annual Income: <input type = 'text' id="annual-income" onChange="" placeholder="Enter Numbers Only"></h2>
+        <button id="calculate-income" onClick=calcIncome()>Calculate</button> 
+        <h4>Base on your annual income, here is your monthly report:</h4>
         </br>
         <div class="sub-container">
-            <div class="sub-heading">
-                Rent (25%): <h3 id="rent" ></h3>
+            <div class="sub-heading-title">
+                Expenses (Monthly expenses should not exceed approximately 70%)
+                <div class="sub-heading">
+                    Rent (30%): <h3 id="rent" ></h3>
+                </div>
+                <div class="sub-heading">
+                    Transportation (5%): <h3 id="transportation"></h3>           
+                </div>
+                <div class="sub-heading">
+                    Utilities (5%): <h3 id="utilities"></h3>             
+                </div>    
+                <div class="sub-heading">
+                    Food/Groceries (20%): <h3 id="food"></h3>
+                </div>  
+                <div class="sub-heading">
+                    Laundry (.8%): <h3 id="laundry"></h3>
+                </div>  
+                <div class="sub-heading">
+                    Medical (5%): <h3 id="medical"></h3> 
+                </div>
+                <div class="sub-heading">
+                    Personal (5%): <h3 id="personal"></h3>
+                </div>
             </div>
-            </br>
-            <div class="sub-heading">
-                Transportation (7%):<h3 id="transportation"></h3>           
+            <div class="sub-heading-title">
+                Savings (Set aside 10% of every paycheck into savings)
+                <div class="sub-heading">    
+                    <div class="sub-heading">
+                    This is your emergency fund. Do not take money out of savings unless you ABSOLUTELY have to    
+                    </div>
+                    Savings (10%): <h3 id="saving"></h3>
+                </div>
             </div>
-            </br>
-            <div class="sub-heading">
-                Utilities (5%): <h3 id="utilities"></h3>             
-            </div>
-            </br>    
-            <div class="sub-heading">
-                Food (10%): <h3 id="food"></h3>
-            </div>
-            </br>  
-            <div class="sub-heading">
-                Medical (5%): <h3 id="medical"></h3> 
-            </div>
-            </br>
-            <div class="sub-heading">
-                Personal (5%): <h3 id="personal"></h3>
-            </div>
-            </br>   
-            <button id="calculate-income" onClick=calcIncome()>Calculate</button>         
+            <div class="sub-heading-title">
+                Investments (Invest 20% of every paycheck)
+                <div class="sub-heading">
+                    <div class="sub-heading-description">
+                    Some options include: stocks, bonds, ETFs, mutual funds, or real estate
+                    </div>
+                    Investments (20%): <h3 id="investment"></h3>
+                </div>
+            </div> 
         </div>
-        </br>
-        
     </div>
 <script>
 function calcIncome() {
     var income = document.getElementById('annual-income').value;
     // Rent
-    var rentNum = Math.floor((income * .25)/12);
+    var rentNum = Math.floor((income * .30)/12);
     rent.innerText = rentNum;
     // Transportation
-    var transportNum = Math.floor((income * .07)/12);
+    var transportNum = Math.floor((income * .05)/12);
     transportation.innerText = transportNum;
     // Utilities
     var utilitiesNum = Math.floor((income * .05)/12);
     utilities.innerText = utilitiesNum;
-    // Food
-    var foodNum = Math.floor((income * .10)/12);
+    // Food/Groceries
+    var foodNum = Math.floor((income * .20)/12);
     food.innerText = foodNum;
+    // Laundry
+    var laundryNum = Math.floor((income * .008)/12);
+    laundry.innerText = laundryNum;
     // Medical
-    var medicalNum = Math.floor((income * .10)/12);
+    var medicalNum = Math.floor((income * .05)/12);
     medical.innerText = medicalNum;
     // Personal
     var personalNum = Math.floor((income * .05)/12);
     personal.innerText = personalNum;
+    // Saving  
+    var savingNum = Math.floor((income * .10)/12);
+    saving.innerText = savingNum;
+    // Investment 
+    var investmentNum = Math.floor((income * .20)/12);
+    investment.innerText = investmentNum;
 }
+
 </script>
 </body>
 </html>

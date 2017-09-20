@@ -33,7 +33,7 @@
             React.DOM.input
                 type: 'text' # Purchase Name
                 className: 'form-value'
-                placeholder: 'Purchase'
+                placeholder: 'Purchase Name'
                 name: 'purchasename'
                 value: @state.purchasename
                 onChange: @handleValueChange               

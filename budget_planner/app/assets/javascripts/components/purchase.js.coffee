@@ -1,4 +1,4 @@
-# Singular purchase
+# Singular purchase, will need to convert to more modern conventional React syntax later
 @Purchase = React.createClass
     getInitialState: -> # Set edit value
         edit: false
@@ -13,8 +13,8 @@
             dataType: 'JSON'
             success: () => 
                 @props.handleDeletePurchase @props.purchase # Notify parent component purchases by sending this component's data to handleDelete 
-    toggleUnit: (e) -> # ********* Check this line of code 
-        e.preventDefault() # ********* Check this line of code     
+    toggleUnit: (e) ->  
+        e.preventDefault()     
     handleEdit: (e) -> 
         e.preventDefault()
         data = 
@@ -82,7 +82,7 @@
                     className: 'btn btn-danger'
                     onClick: @handleToggle # This will delete item when you press cancel. Need to fix this error
                     'Cancel'
-    render: -> # Will return React element
+    render: -> # Will return React element, create if/else for edit functionality
         if @state.edit
             @purchaseForm()
         else 
