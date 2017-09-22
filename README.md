@@ -10,9 +10,9 @@ Budget Planner is an web application that allows users to record their daily exp
 
 ## Inspiration Behind Budget Planner 
 
-When I was in my teenage years, I attended a business high school that taught classes relating to accounting, investing, financial markets, and personal finance. After finishing high school, I went on to pursue my bachelors in business. While a student at Skidmore College, I realized that many of my peers had never taken a course relating to personal finance and did not consider themselves financially saavy. With this app, I wanted to create a report that allows users to track their expenses. Budget Planner will also provide useful information and resources on personal finance for millennials.
+I attended a business high school that taught classes relating to accounting, investing, financial markets, and personal finance. After finishing high school, I went on to pursue my bachelors in business. While a student at Skidmore College, I realized that many of my peers had never taken a course relating to personal finance and did not consider themselves financially saavy. With this app, I wanted to be able to help millennials keep track of their expenses and provide an insight tool into how much they should be saving, investing, and spending a month. In addition Budget Planner will also provide useful information and resources on personal finance for millennials. 
 
-For Budget Planner, I decided to focus on React and Rails to build this platform. Originally, I wanted to build my entire platform using Ruby on Rails but React is a much quicker JS library for the front-end. On the back-end, I decided to use Rails. In addition I decided to use CoffeeScript in order to display code that would be simpler to understand. Additionally, Bootstrap is a great front-end component that I decided to incorporate to display a more beautiful layout of the app. 
+For Budget Planner, I decided to focus on React and Rails to build this platform. Originally, I wanted to build my entire platform using Ruby on Rails but React is a much quicker JS library for the front-end. On the back-end, I decided to use Rails. In addition I decided to use CoffeeScript in order to display code that would be simpler to understand. In addition I wanted to experiment with coffee files while I wrote React code. 
 
 ## Technical Discussion
 
@@ -33,13 +33,13 @@ For Budget Planner, I decided to focus on React and Rails to build this platform
 
 ## Challenges
 
-Some of my biggest challenges encountered along the way using CoffeeScript. CoffeeScript is very precise when it comes to syntax and a slight space can affect the overall functionality of the code. In addition another roadblock was perfecting the set up of the CRUD system. In particular the edit/update functionality took quite some time to fix as there were several bugs and other setbacks along the way.
+Some of my biggest challenges encountered along the way using CoffeeScript. CoffeeScript is very precise when it comes to syntax and a slight space can affect the overall functionality of the code. In addition another roadblock was perfecting the set up of the CRUD system. In particular the edit/update functionality took quite some time to fix as there were several bugs and other setbacks along the way. In addition, one of the fun challenges was coming up with basic math to calculate expenses, savings, and investment and converting it to code. 
 
 ## Opportunities for Future Growth
+ 
+The next step of this app would be to incorporate a login functionality that will allow users to sign up for an account in order to save their expenses to their account. In addition I want to set up an API that will link users bank accounts to Budget Planner. With this API, it will allow users to sync their expenses from their accounts to Budget Planner.
 
-The next step of budget planner is to incorporate a budget calculator that will allow users to input their income and receive an estimate of how much they should be saving per month and year on expenses such as: rent, transportation, utilities, food, medical, and personal.    
-
-In addition, it will be incredibly important to set up an login/authentication to store users expenses into their personal account. Users will be able to not only store their expense history but also information regarding a budget calculation of their income history. Ideally, anyone and everyone is allow to use this tool without setting up an account to maintain their privacy. 
+In addition I definitely want to use another styling framework in order to fix up the visual appearance of the webpage. 
 
 ## Credits: 
 
