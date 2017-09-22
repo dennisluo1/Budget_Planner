@@ -22,10 +22,41 @@ For Budget Planner, I decided to focus on React and Rails to build this platform
 * Bootstrap: Used to add beautiful styling to design of app
 
 ### Sample Code
+Here is a simple Javascript function to calculate certain expenses, savings and investment:
 
 ```
+function calcIncome() {
+    var income = document.getElementById('annual-income').value;
+    
+    var rentNum = Math.floor((income * .30)/12);
+    rent.innerText = rentNum;
 
+    var transportNum = Math.floor((income * .05)/12);
+    transportation.innerText = transportNum;
+
+    var utilitiesNum = Math.floor((income * .05)/12);
+    utilities.innerText = utilitiesNum;
+
+    var foodNum = Math.floor((income * .20)/12);
+    food.innerText = foodNum;
+
+    var laundryNum = Math.floor((income * .008)/12);
+    laundry.innerText = laundryNum;
+
+    var medicalNum = Math.floor((income * .05)/12);
+    medical.innerText = medicalNum;
+
+    var personalNum = Math.floor((income * .05)/12);
+    personal.innerText = personalNum;
+
+    var savingNum = Math.floor((income * .10)/12);
+    saving.innerText = savingNum;
+
+    var investmentNum = Math.floor((income * .20)/12);
+    investment.innerText = investmentNum;
+}
 ```
+Special thanks to [Hao Sun](https://github.com/gumosun) for assisting in developing this expense calculation!
 
 ## Proposal - User Story/Wireframes
 
