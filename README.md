@@ -1,6 +1,6 @@
 # Budget_Planner
 
-![](./wireframes/)
+![](./wireframes/screenshot.png)
 [View web app on Heroku here]()
 
 ## What is Budget Planner?
