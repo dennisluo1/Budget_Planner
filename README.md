@@ -1,7 +1,6 @@
 # Budget_Planner
 
 ![](./wireframes/screenshot.png)
-[View web app on Heroku here]()
 
 ## What is Budget Planner?
 
@@ -56,7 +55,6 @@ function calcIncome() {
     investment.innerText = investmentNum;
 }
 ```
-Special thanks to [Hao Sun](https://github.com/gumosun) for assisting in developing this expense calculation!
 
 ## Proposal - User Story/Wireframes
 
